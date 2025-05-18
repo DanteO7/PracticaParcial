@@ -1,0 +1,227 @@
+@import url("./globals.css");
+
+.hero-container {
+  background-image: url(./../images/hero-image.jpg);
+  background-color: rgba(28, 26, 26, 0.645);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+
+  width: 100%;
+  max-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.hero-container h1 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+
+  animation-name: moveX;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.hero-container p,
+.hero-container span {
+  color: var(--secondary-text-color);
+
+  animation-name: moveY;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.hero-container a {
+  margin-top: 15px;
+  width: 60%;
+  animation-name: moveY;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.subtitle {
+  margin: 25px 0px 0px 25px;
+
+  animation-name: moveY;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 25px;
+  transform: translateY(30px);
+
+  animation-name: moveY;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.card a {
+  margin: 15px auto;
+  width: 80%;
+}
+
+.card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-title h3::before {
+  content: "- ";
+  color: black;
+  margin-left: 5px;
+}
+
+.card-image {
+  width: 40px;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.about-me-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.profesor-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-image: url(./../images/profesor.png);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--tertiary-color);
+  box-shadow: 5px 5px 10px 0.5px #000000a1;
+}
+
+.content-about-me {
+  width: 60%;
+  margin: 0 auto;
+}
+
+@keyframes moveX {
+  0% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@media (width > 425px) {
+  .hero-container {
+    height: 70vh;
+
+    justify-content: center;
+  }
+
+  .hero-container h1,
+  .hero-container p,
+  .hero-container span {
+    width: 50%;
+  }
+
+  .hero-container a {
+    width: 40%;
+  }
+}
+
+@media (width > 768px) {
+  .hero-container {
+    padding: 25px 70px;
+  }
+
+  .hero-container h1 {
+    width: 28%;
+  }
+
+  .hero-container p,
+  .hero-container span {
+    width: 30%;
+  }
+
+  .hero-container a {
+    width: 20%;
+  }
+
+  .subtitle {
+    margin: 40px 0px 0px 9%;
+  }
+
+  .cards-container {
+    flex-direction: row;
+    width: 85%;
+    gap: 5%;
+    margin: 30px auto;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
+    box-shadow: 5px 5px 10px 0.5px #000000a1;
+
+    transition: all 0.4s ease-in-out;
+  }
+
+  .card:hover {
+    background-color: var(--hover-color);
+  }
+
+  .card a {
+    margin-top: 25px;
+  }
+
+  .card-title {
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .about-me {
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .content-about-me {
+    width: 60%;
+    margin: 0;
+  }
+}

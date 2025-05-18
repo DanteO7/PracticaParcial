@@ -1,0 +1,119 @@
+@import url("./globals.css");
+
+main {
+  padding: 15px;
+
+  animation-name: moveY;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.service-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.service-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--tertiary-color);
+  padding: 10px;
+  padding-top: 25px;
+  margin-bottom: 25px;
+}
+
+.service-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--tertiary-color);
+  box-shadow: 5px 5px 10px 0.5px #000000a1;
+}
+
+.pilates-image {
+  background-image: url(./../images/pilates-actividad.webp);
+}
+
+.yoga-image {
+  background-image: url(./../images/yoga-actividad.avif);
+}
+
+.funcional-image {
+  background-image: url(./../images/funcional-actividad.avif);
+}
+
+.stretching-image {
+  background-image: url(./../images/stretching-actividad.jpg);
+}
+
+.service-details h4 {
+  margin-bottom: 10px;
+}
+
+.service-details ul {
+  list-style: disc inside;
+  padding: 5px;
+}
+
+.service-details ul li {
+  display: list-item;
+  padding: 2px;
+}
+
+@media (width > 768px) {
+  .service-header {
+    width: 75%;
+    margin: 35px auto;
+  }
+
+  .service-details {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .service-details {
+    flex-direction: row;
+    align-items: center;
+
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    margin: 55px auto;
+    text-align: center;
+    padding: 50px;
+    box-shadow: 5px 5px 10px 0.5px #000000a1;
+
+    transition: all 0.4s ease-in-out;
+  }
+
+  .service-details:hover {
+    background-color: var(--hover-color);
+  }
+
+  .service-image {
+    width: 20%;
+    height: 260px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .service-image:hover {
+    transform: scale(1.05);
+  }
+  .service-details h3 {
+    width: 20%;
+  }
+  .service-details p {
+    width: 20%;
+  }
+  .service-details ul {
+    width: 20%;
+  }
+  .service-details a {
+    width: 15%;
+  }
+}
